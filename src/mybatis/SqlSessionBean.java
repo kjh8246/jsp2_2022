@@ -13,6 +13,12 @@ public class SqlSessionBean {
  * SqlSesseionFactoryBuilder --> SqlSessionFactory 객체 생성 --> SqlSession 객체 생성  : 클래스 의존관계
  * --> dao 클래스에서 SqlSession 객체생성 : 클래스 의존관계
  * SqlSession 객체로 db sql을 샐행합니다.
+ * https://mybatis.org/mybatis-3/ko/getting-started.html 참고
+ * 
+ * String resource = "org/mybatis/example/mybatis-config.xml";
+	InputStream inputStream = Resources.getResourceAsStream(resource);
+	SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+ 	
  */
 	public static SqlSessionFactory sqlSessionFactory;
 	static {   //변수들이 static 영역에 저장됩니다.
